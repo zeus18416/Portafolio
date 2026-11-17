@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Oscar David Zapata Ossa, desarrollador web en formación.">
+    <meta name="author" content="Oscar David Zapata Ossa">
+    <title>Oscar David Zapata Ossa | Portafolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Enlace de accesibilidad para saltar al contenido -->
+    <a href="#contenido"
+       class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-blue-900 focus:px-4 focus:py-2 focus:text-white">
+        Saltar al contenido
+    </a>
+
+    <!-- ================= ENCABEZADO / NAVEGACIÓN ================= -->
+    <!-- Nav fijo: siempre visible arriba, en todos los tamaños de pantalla -->
+    <header class="fixed inset-x-0 top-0 z-40 h-24 border-b border-slate-200 bg-white sm:h-16">
+        <nav aria-label="Navegación principal" class="mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-2 px-4 sm:flex-row sm:justify-between sm:gap-0 sm:px-6">
+            <a href="#inicio" class="text-lg font-bold text-blue-800">ODZ<span class="text-slate-800">.dev</span></a>
+
+            <!-- Flexbox: en móvil los enlaces pueden pasar a otra línea (flex-wrap) -->
+            <ul class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm font-medium sm:gap-x-8">
+                <li><a href="#sobre-mi" class="hover:text-blue-950">Sobre mí</a></li>
+                <li><a href="#habilidades" class="hover:text-blue-950">Habilidades</a></li>
+                <li><a href="#proyectos" class="hover:text-blue-950">Proyectos</a></li>
+                <li><a href="#contacto" class="hover:text-blue-950">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- El padding superior compensa la altura del nav fijo -->
+    <main id="contenido" class="pt-24 sm:pt-16">
+
+        <!-- ================= HERO ================= -->
+        <section id="inicio" aria-labelledby="titulo-inicio" class="bg-gradient-to-br from-slate-950 to-blue-950 text-white">
+            <!-- Grid: 1 columna en móvil (avatar arriba), 2 columnas desde md (texto | avatar) -->
+            <div class="mx-auto grid max-w-5xl place-items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] md:py-28">
+                <div class="order-2 text-center md:order-1 md:text-left">
+                    <p class="font-medium text-amber-400">Hola, soy</p>
+                    <h1 id="titulo-inicio" class="mt-2 text-4xl font-extrabold leading-tight sm:text-5xl">
+                        Oscar David Zapata Ossa
+                    </h1>
+                    <p class="mt-4 max-w-xl text-lg text-blue-100">
+                        Desarrollador web en formación en Riwi. Me apasiona construir interfaces limpias, accesibles y responsive.
+                    </p>
+                    <!-- Flexbox: botones apilados en móvil, en fila desde sm -->
+                    <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
+                        <a href="#proyectos" class="rounded-lg bg-amber-400 px-6 py-3 font-semibold text-blue-950 shadow hover:bg-amber-300">
+                            Ver proyectos
+                        </a>
+                        <a href="#contacto" class="rounded-lg border border-white px-6 py-3 font-semibold hover:bg-white/10">
+                            Contáctame
+                        </a>
+                    </div>
+                </div>
+                <figure class="order-1 md:order-2">
+                    <div role="img" aria-label="Avatar con las iniciales ODZ"
+                         class="flex h-40 w-40 items-center justify-center rounded-full border-4 border-white/40 bg-white/20 text-5xl font-bold sm:h-52 sm:w-52">
+                        ODZ
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ================= SOBRE MÍ ================= -->
+        <section id="sobre-mi" aria-labelledby="titulo-sobre-mi" class="mx-auto max-w-5xl scroll-mt-24 sm:scroll-mt-16 px-4 py-16 md:py-20 sm:px-6">
+            <h2 id="titulo-sobre-mi" class="text-3xl font-bold">Sobre mí</h2>
+            <!-- Grid: 1 columna en móvil, 3 columnas desde md (texto ocupa 2) -->
+            <div class="mt-6 grid gap-8 md:grid-cols-3">
+                <p class="leading-relaxed text-slate-600 md:col-span-2">
+                    Soy un desarrollador en formación enfocado en el desarrollo web. Disfruto aprender nuevas tecnologías,
+                    trabajar en equipo y resolver problemas con lógica y creatividad. Actualmente fortalezco mis bases en
+                    HTML, CSS y herramientas de inteligencia artificial aplicadas al desarrollo.
+                </p>
+                <!-- Grid interno: 1 col en móvil, 3 en sm, vuelve a 1 en md (barra lateral) -->
+                <dl class="grid gap-4 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:grid-cols-3 md:grid-cols-1">
+                    <div>
+                        <dt class="text-sm text-slate-600">Ubicación</dt>
+                        <dd class="font-medium">Colombia</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm text-slate-600">Formación</dt>
+                        <dd class="font-medium">Riwi</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm text-slate-600">Enfoque</dt>
+                        <dd class="font-medium">Full Stack en proceso</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ================= HABILIDADES ================= -->
+        <section id="habilidades" aria-labelledby="titulo-habilidades" class="scroll-mt-24 sm:scroll-mt-16 bg-white py-16 md:py-20">
+            <div class="mx-auto max-w-5xl px-4 sm:px-6">
+                <h2 id="titulo-habilidades" class="text-3xl font-bold">Habilidades</h2>
+                <!-- Grid: 2 columnas en móvil → 3 en sm → 4 en lg -->
+                <ul class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">HTML5</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">CSS3</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">Tailwind CSS</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">Diseño responsive</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">Git y GitHub</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">Accesibilidad</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">Prompting con IA</li>
+                    <li class="rounded-lg border border-slate-200 p-4 text-center font-medium hover:border-amber-500">Trabajo en equipo</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= PROYECTOS ================= -->
+        <section id="proyectos" aria-labelledby="titulo-proyectos" class="mx-auto max-w-5xl scroll-mt-24 sm:scroll-mt-16 px-4 py-16 md:py-20 sm:px-6">
+            <h2 id="titulo-proyectos" class="text-3xl font-bold">Proyectos</h2>
+            <p class="mt-2 text-slate-600">Repositorios públicos de mi GitHub, creados durante mi formación en Riwi.</p>
+
+            <!-- Grid: 1 columna en móvil → 2 en sm → 3 en lg.
+                 Cada tarjeta usa flexbox en columna para que los enlaces queden siempre abajo -->
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="flex flex-col rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-md">
+                    <h3 class="text-xl font-semibold">Rueda Libre</h3>
+                    <p class="mt-2 flex-1 text-slate-600">Sitio web de alquiler de bicicletas en Medellín, construido y mejorado semana a semana.</p>
+                    <ul class="mt-4 flex flex-wrap gap-2 text-xs" aria-label="Tecnologías usadas">
+                        <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-900">HTML</li>
+                        <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-900">CSS</li>
+                    </ul>
+                    <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                        <a href="https://zeus18416.github.io/rueda-libre/Semana_2/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-800 hover:underline">
+                            Ver sitio →<span class="sr-only"> (se abre en otra pestaña)</span>
+                        </a>
+                        <a href="https://github.com/zeus18416/rueda-libre" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-800 hover:underline">
+                            Repositorio<span class="sr-only"> de Rueda Libre (se abre en otra pestaña)</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-md">
+                    <h3 class="text-xl font-semibold">Algoritmia</h3>
+                    <p class="mt-2 flex-1 text-slate-600">Ejercicios de lógica en pseudocódigo: promedio de notas, parqueadero, semáforo, cajero, factura de restaurante y más.</p>
+                    <ul class="mt-4 flex flex-wrap gap-2 text-xs" aria-label="Tecnologías usadas">
+                        <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-900">PSeInt</li>
+                        <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-900">Lógica</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="https://github.com/zeus18416/algoritmia" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-800 hover:underline">
+                            Repositorio →<span class="sr-only"> de Algoritmia (se abre en otra pestaña)</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-md">
+                    <h3 class="text-xl font-semibold">IA</h3>
+                    <p class="mt-2 flex-1 text-slate-600">Ejercicios del módulo de inteligencia artificial: ordenamiento de números en equipo y una página web creada solo con prompts.</p>
+                    <ul class="mt-4 flex flex-wrap gap-2 text-xs" aria-label="Tecnologías usadas">
+                        <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-900">IA</li>
+                        <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-900">Prompting</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="https://github.com/zeus18416/IA" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-800 hover:underline">
+                            Repositorio →<span class="sr-only"> de IA (se abre en otra pestaña)</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="mt-10 text-center">
+                <a href="https://github.com/zeus18416?tab=repositories" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-800 hover:underline">
+                    Ver todos mis repositorios en GitHub →<span class="sr-only"> (se abre en otra pestaña)</span>
+                </a>
+            </p>
+        </section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section id="contacto" aria-labelledby="titulo-contacto" class="scroll-mt-24 sm:scroll-mt-16 bg-blue-950 py-16 md:py-20 text-white">
+            <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+                <h2 id="titulo-contacto" class="text-3xl font-bold">Contacto</h2>
+                <p class="mt-4 text-blue-100">¿Tienes una idea o una oportunidad? Escríbeme y hablemos.</p>
+                <!-- Flexbox: botones apilados a lo ancho en móvil, en fila desde sm -->
+                <address class="mt-8 flex flex-col items-center justify-center gap-4 not-italic sm:flex-row">
+                    <!-- Abre la ventana de redacción de Gmail en otra pestaña con el destinatario ya puesto -->
+                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=davidzpata5@gmail.com" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg bg-amber-400 px-6 py-3 font-semibold text-blue-950 hover:bg-amber-300 sm:w-auto">
+                        Enviar correo<span class="sr-only"> (se abre en otra pestaña)</span>
+                    </a>
+                    <a href="https://github.com/zeus18416" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg border border-amber-400/60 px-6 py-3 font-semibold hover:bg-blue-900 sm:w-auto">
+                        GitHub<span class="sr-only"> (se abre en otra pestaña)</span>
+                    </a>
+                </address>
+                <p class="mt-6 text-blue-100">davidzpata5@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <!-- Flexbox: centrado y apilado en móvil, separado a los lados desde sm -->
+    <footer class="border-t border-slate-800 bg-slate-950 text-sm text-slate-400">
+        <div class="mx-auto flex max-w-5xl flex-col items-center gap-2 px-4 py-6 text-center sm:flex-row sm:justify-between sm:px-6 sm:text-left">
+            <p>&copy; 2026 Oscar David Zapata Ossa</p>
+            <p>Hecho con HTML y Tailwind CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>
